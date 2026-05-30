@@ -1,5 +1,5 @@
 body{
-    background-color: #b5d473;
+    background-color: #d6dace;
     font-family: "Roboto", sans-serif;
 }
 
@@ -15,7 +15,7 @@ h1, h2{
     margin: 20px;
 }
 
-.barra-de-navegacion a{
+.barra-de-navegacion a {
     background-color: #E1306C;
     color: white;
     padding: 10px 20px;
@@ -26,6 +26,11 @@ h1, h2{
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.barra-de-navegacion a:hover {
+    background-color: #6e0741;
+    transition: 0.3s; 
 }
 
 .barra-de-navegacion{
@@ -50,7 +55,20 @@ h1, h2{
     padding: 15px;
     border-radius: 10px;
     text-align: center;
+    transition: 0.3s;
+    box-shadow: 0px 16px 40px rgba(0,0,0,0.2);
 }
+
+.fonoaudiologos:hover, .kinesiologa:hover, .terapeutas-ocupacionales:hover,
+.kinesiologia:hover, .terapia-ocupacional:hover, .psicologia:hover, .fonoaudiologia:hover, 
+.ados:hover, .pep-3:hover, .hero-contenido a:hover {
+    background-color: rgb(170, 24, 24);
+    transition: 0.3s;
+    transform: scale(1.05);
+    
+}
+
+
 
 .fonoaudiologia, .kinesiologia, .terapia-ocupacional, .psicologia{
     background-color: white;
@@ -58,6 +76,8 @@ h1, h2{
     padding: 15px;
     border-radius: 10px;
     text-align: center;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
 }
 
 .fotos{
@@ -74,6 +94,8 @@ h1, h2{
     padding: 15px;
     border-radius: 10px;
     text-align: center;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
 }
 
 .ados,
@@ -91,4 +113,37 @@ footer{
     text-align: center;
     padding: 10px;
     margin-top: 20px;
+}
+
+.hero{
+    background-image: url("Imagenes/hero.jpg");
+    background-size: cover;
+    background-position: 70% 30%;
+    height: 500px;
+    display: flex;
+    justify-content: left center;
+    align-items: left center;
+    text-align: left center;
+}
+
+.hero-contenido{
+    background-color: rgba(0,0,0,0.5);
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+}
+
+.hero-contenido a{
+    background-color: #E1306C;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.hero-contenido h1{
+    color: white;
+    text-shadow: 2px 20px 40px rgba(0, 0, 0, 0.5);
 }
