@@ -188,3 +188,22 @@ footer{
     text-shadow: 2px 20px 40px rgba(0, 0, 0, 0.5);
     font-size: 30px;
 }
+
+.hamburguesa{
+    display: none;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+    .hamburguesa{
+        display: block;
+    }
+    .menu{
+        display: none;
+    }
+    .menu.activo{
+        display: flex;
+        flex-direction: column;
+    }
+}

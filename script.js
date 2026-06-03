@@ -1,1 +1,12 @@
 console.log("Javascript conectado correctamente");
+
+const hamburguesa = document.querySelector(".hamburguesa");
+
+const menu = document.querySelector(".menu");
+
+hamburguesa.addEventListener("click", function(){
+
+    menu.classList.toggle("activo");
+
+});
+
