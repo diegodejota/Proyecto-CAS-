@@ -144,9 +144,8 @@ footer{
     background-position: 70% 30%;
     height: 620px;
     display: flex;
-    justify-content: left center;
-    align-items: left center;
-    text-align: left center;
+    justify-content: flex-start;
+    align-items: center;
     background-image:
     linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)
     ), url("Imagenes/hero.jpg");
@@ -157,21 +156,14 @@ footer{
 
 .hero-contenido{
     background-color: rgba(0,0,0,0.5);
+    height: 90%;
+    width: 400px;
     padding: 30px;
     border-radius: 10px;
     color: white;
     animation: aparecer 1s ease;
-    @keyframes aparecer{
-    from{
-        opacity: 0;
-        transform: translateY(30px);
+    text-align: left top;
     }
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-}
 
 .hero-contenido a{
     background-color: #fdd01e;
@@ -195,15 +187,61 @@ footer{
     cursor: pointer;
 }
 
-@media (max-width: 768px){
+.cerrar{
+    display: none;
+}
+
+@media (max-width:768px){
+
+    .barra-de-navegacion{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;
+        padding:20px;
+    }
+
     .hamburguesa{
-        display: block;
+        display:block;
+        font-size:40px;
+        cursor:pointer;
     }
+
     .menu{
-        display: none;
+    position: fixed;
+    top:0;
+    right:-300px;
+    width:300px;
+    height:100vh;
+    transition:0.3s;
     }
+    
     .menu.activo{
-        display: flex;
-        flex-direction: column;
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    background: #78d3a6;
+    padding: 80px 20px;
     }
+
+    .menu a{
+        width:100%;
+        text-align:center;
+    }
+
+.cerrar{
+    display: block;
+    font-size: 35px;
+    cursor: pointer;
+    align-self: flex-end;
+}
 }
