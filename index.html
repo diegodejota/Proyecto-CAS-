@@ -9,12 +9,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 
 </head> 
 <body>
-
+    <div class="overlay"></div>
+    
     <div class="barra-de-navegacion">
-        <img class="logo" src="Imagenes/CAS.jpg" alt="Logo CAS Autismo La Pintana">
+        <a href="#">
+            <img class="logo" src="Imagenes/CAS.jpg" alt="Logo CAS Autismo La Pintana">
+        </a>
         <div class="hamburguesa"> 
 
         ☰
@@ -23,16 +27,16 @@
 
         <div class="menu">
             <div class="cerrar">✕</div>
-            <a href="index.html">Inicio</a>
-            <a href="quienes-somos.html">Quiénes somos</a>
-            <a href="nuestros-servicios.html">Nuestros servicios</a>
+            <a href="#quienes-somos">Quiénes somos</a>
+            <a href="#terapias">Terapias</a>
+            <a href="#evaluaciones">Evaluaciones</a>
+            <a href="#terapeutas">Nuestros terapeutas</a>
             <a href="https://wa.me/56927653017" target="_blank"><img src="Imagenes/whatsapp.svg" alt="Whatsapp" width="20"> Whatsapp </a>
             <a href="https://www.instagram.com/autismo_lapintana/" target="_blank"><img src="Imagenes/instagram.svg" alt="Instagram" width="20"> Instagram</a>
         </div>
     </div>
 
-    <section class="hero">
-        
+    <section class="hero" id="inicio">
 
         <div class="hero-contenido">
             <h1>CAS Autismo La Pintana</h1>
@@ -40,24 +44,22 @@
             <a href="https://wa.me/56927653017" target="_blank">
             Contáctanos</a>
         </div>
+    </section>
+
+
+        <section ">
+
+        <h2 id="quienes-somos">Quiénes somos</h2>
+
+        <p class="parrafos">
+        CAS Autismo La Pintana es un centro especializado...
+        </p>
+
+        </section>
 
     </section>
-    
-    <h2> Evaluaciones</h2>
-    <p class="parrafos"> Realizamos evaluaciones fundamentales para iniciar, detectar y seguir el proceso terapeutico de cada niño.</p>
-        <div class="evaluaciones">
-            <div class="ados">
-                <img class= "fotos" src="Imagenes/images.jpg" alt="Evaluacion ADOS" >
-                <p> Evaluación ADOS </p>
-            </div>
-            <div class="pep-3">
-                <img class= "fotos" src="Imagenes/pep-3.jpg" alt="Evaluacion PEP-3">
-                <p> Evaluación PEP-3 </p>
-            </div>
-        </div>
 
-
-        <h2> Terapias </h2>
+    <h2 id="terapias"> Terapias </h2>
         <p class="parrafos"> Ofrecemos terapias especializadas para abordar las necesidades individuales de cada niño, promoviendo su desarrollo integral.</p>
             <div class="terapias">
                 <div class="fonoaudiologia">
@@ -77,9 +79,21 @@
                     <p> Terapia de Psicología </p> 
                 </div>
             </div>
+    
+    <h2 id="evaluaciones"> Evaluaciones</h2>
+    <p class="parrafos"> Realizamos evaluaciones fundamentales para iniciar, detectar y seguir el proceso terapeutico de cada niño.</p>
+        <div class="evaluaciones">
+            <div class="ados">
+                <img class= "fotos" src="Imagenes/images.jpg" alt="Evaluacion ADOS" >
+                <p> Evaluación ADOS </p>
+            </div>
+            <div class="pep-3">
+                <img class= "fotos" src="Imagenes/pep-3.jpg" alt="Evaluacion PEP-3">
+                <p> Evaluación PEP-3 </p>
+            </div>
+        </div>
 
-
-            <h2> Nuestros terapeutas </h2>
+            <h2 id="terapeutas"> Nuestros terapeutas </h2>
             <p class="parrafos"> Contamos con un equipo de terapeutas especializados en cada área, comprometidos con el bienestar y desarrollo de cada niño.</p>
             <div class="terapeutas">
                 <div class="fonoaudiologos">

@@ -4,6 +4,18 @@ body{
     margin: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+#terapias, #evaluaciones, #terapeutas, #quienes-somos{
+    scroll-margin-top: 100px
+}
+
+.overlay{
+    display:none;
+}
+
 .logo{
     width: 55px;
     height: 55px;
@@ -35,7 +47,7 @@ h2{
     align-items: center;
 }
 
-.barra-de-navegacion a {
+.menu a {
     background-color: #fdd01e;
     color: rgb(15, 12, 12);
     padding: 10px 20px;
@@ -49,7 +61,7 @@ h2{
     
 }
 
-.barra-de-navegacion a:hover {
+.menu a:hover {
     background-color: #fd9e3d;
     transform: scale(1.10);
     transition: all 0.3s ease;
@@ -221,6 +233,7 @@ footer{
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 1000;
 
     width: 250px;
     height: 100vh;
@@ -244,4 +257,20 @@ footer{
     cursor: pointer;
     align-self: flex-end;
 }
+}
+
+.overlay.activo{
+    display:block;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100vh;
+
+    background-color:rgba(0,0,0,0.5);
+
+    z-index:999;
 }
