@@ -8,7 +8,7 @@ html{
     scroll-behavior: smooth;
 }
 
-#terapias, #evaluaciones, #terapeutas, #quienes-somos{
+#terapias, #actividades, #terapeutas, #quienes-somos{
     scroll-margin-top: 100px
 }
 
@@ -79,7 +79,7 @@ h2{
     z-index: 1000;
 }
 
-.terapeutas, .evaluaciones, .terapias {
+.terapeutas, .actividades, .terapias {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -99,14 +99,14 @@ h2{
 
 .fonoaudiologos:hover, .kinesiologa:hover, .terapeutas-ocupacionales:hover,
 .kinesiologia:hover, .terapia-ocupacional:hover, .psicologia:hover, .fonoaudiologia:hover, 
-.ados:hover, .pep-3:hover, .hero-contenido a:hover {
+.ados:hover, .hero-contenido a:hover, .actividad-card:hover {   
     background-color: #fd9e3d;
     transition: 0.3s;
     transform: scale(1.05);
     
 }
 
-.fonoaudiologia, .kinesiologia, .terapia-ocupacional, .psicologia{
+.fonoaudiologia, .kinesiologia, .terapia-ocupacional, .psicologia, .ados {
     background-color: #fdd01e;
     width: 220px;
     padding: 15px;
@@ -121,26 +121,6 @@ h2{
     height: 350px;
     object-fit: cover;
     margin: 0 auto;
-}
-
-.ados,
-.pep-3{
-    background-color: #fdd01e;
-    width: 220px;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-}
-
-.ados,
-.pep-3{
-    background-color: #fdd01e;
-    width: 220px;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
 }
 
 footer{
@@ -160,7 +140,7 @@ footer{
     align-items: center;
     background-image:
     linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)
-    ), url("Imagenes/hero.jpg");
+    ), url("Imagenes/hero.jpeg");
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
@@ -191,6 +171,75 @@ footer{
     color: white;
     text-shadow: 2px 20px 40px rgba(0, 0, 0, 0.5);
     font-size: 30px;
+}
+
+.card-quienes{
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    gap: 30px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.foto-quienes{
+    width: 40%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.texto-quienes{
+    width: 60%;
+}
+
+.actividad-destacada{
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    gap: 30px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.actividad-destacada img{
+    width: 50%;
+    height: 450px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#actividades h3{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.actividades-anteriores{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.actividad-card{
+    background-color: #fdd01e;
+    width: 250px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.actividad-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .hamburguesa{
@@ -251,6 +300,12 @@ footer{
         text-align:center;
     }
 
+    .actividad-destacada{
+        flex-direction: column;
+    }
+    .actividad-destacada img{
+        width: 100%;
+    }
 .cerrar{
     display: block;
     font-size: 35px;
