@@ -134,16 +134,29 @@ footer{
 .hero{
     background-size: cover;
     background-position: 70% 30%;
+    position: relative;
     height: 620px;
+    overflow: hidden;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-image:
-    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)
-    ), url("Imagenes/hero.jpeg");
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.slide{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.activo{
+    opacity: 1;
 }
 
 .hero-contenido{
@@ -155,7 +168,9 @@ footer{
     color: white;
     animation: aparecer 1s ease;
     text-align: left top;
-    }
+    position: relative;
+    z-index: 10;
+}
 
 .hero-contenido a{
     background-color: #fdd01e;
