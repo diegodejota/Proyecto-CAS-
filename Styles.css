@@ -28,6 +28,14 @@ html{
     transition: 0.3s;
 }
 
+.badge-actividad{
+    background:#78d3a6;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:14px;
+}
+
 h2{
     text-align: center;
     color: #333;
