@@ -87,7 +87,7 @@ h2{
     z-index: 1000;
 }
 
-.terapeutas, .actividades, .terapias {
+.terapeutas, .actividades, .terapias, .testimonios-contenido {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -95,7 +95,7 @@ h2{
     flex-wrap: wrap;
 }
 
-.fonoaudiologos, .kinesiologa, .terapeutas-ocupacionales {
+.fonoaudiologos, .kinesiologa, .terapeutas-ocupacionales, .testimonio {
     background-color: #fdd01e;
     width: 220px;
     padding: 15px;
@@ -107,14 +107,14 @@ h2{
 
 .fonoaudiologos:hover, .kinesiologa:hover, .terapeutas-ocupacionales:hover,
 .kinesiologia:hover, .terapia-ocupacional:hover, .psicologia:hover, .fonoaudiologia:hover, 
-.ados:hover, .hero-contenido a:hover, .actividad-card:hover {   
+.ados:hover, .hero-contenido a:hover, .actividad-card:hover, .testimonio:hover {   
     background-color: #fd9e3d;
     transition: 0.3s;
     transform: scale(1.05);
     
 }
 
-.fonoaudiologia, .kinesiologia, .terapia-ocupacional, .psicologia, .ados {
+.fonoaudiologia, .kinesiologia, .terapia-ocupacional, .psicologia, .ados, .testimonio {
     background-color: #fdd01e;
     width: 220px;
     padding: 15px;
@@ -207,6 +207,24 @@ footer{
     box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
 }
 
+.card-quienes.invertida{
+    flex-direction: row-reverse;
+}
+
+.areas-fono{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:20px;
+}
+
+.areas-fono span{
+    background:#78d3a6;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+}
+
 .foto-quienes{
     width: 40%;
     border-radius: 10px;
@@ -273,6 +291,22 @@ footer{
 
 .cerrar{
     display: none;
+}
+
+.boton-principal{
+    background-color: #fdd01e;
+    color: #333;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.boton-principal:hover{
+    background-color: #fd9e3d;
+    transition: 0.3s;
+    transform: scale(1.05);
 }
 
 @media (max-width:768px){
