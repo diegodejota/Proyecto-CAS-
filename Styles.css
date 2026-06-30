@@ -111,7 +111,7 @@ h2{
     background-color: #fd9e3d;
     transition: 0.3s;
     transform: scale(1.05);
-    
+    cursor: pointer;
 }
 
 .fonoaudiologia, .kinesiologia, .terapia-ocupacional, .psicologia, .ados, .testimonio {
@@ -178,6 +178,11 @@ footer{
     text-align: left top;
     position: relative;
     z-index: 10;
+}
+
+.terapias a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .hero-contenido a{
