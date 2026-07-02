@@ -131,12 +131,46 @@ h2{
     margin: 0 auto;
 }
 
-footer{
-    background-color: #333;
+.footer-redes a, .footer-contacto a{
     color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.footer-redes a:hover, .footer-contacto a:hover{
+    color: #fdd01e;
+    transition: 0.3s;
+}
+
+.footer-logo img{
+    width:150px;
+    border-radius:50%;
+}
+
+footer h3{
+    color:#fdd01e;
+}
+
+footer{
+    background:#333;
+    color:white;
+    padding:40px;
+}
+
+.footer-superior{
+    display:flex;
+    justify-content:space-around;
+    align-items:flex-start;
+    flex-wrap:wrap;
+}
+
+.footer-copy{
+    width: 100%;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
 }
 
 .hero{
