@@ -1,3 +1,9 @@
+    *{
+    outline:1px solid red;
+}
+
+
+
 body{
     background-color: #ffffff;
     font-family: poppins, sans-serif;
@@ -219,6 +225,12 @@ footer{
     color: inherit;
 }
 
+.boton-activo{
+    background-color:#fd9e3d !important;
+    transform:scale(1.05);
+    border:2px solid rgb(255, 255, 255);
+}
+
 .hero-contenido a{
     background-color: #fdd01e;
     color: #333;
@@ -241,7 +253,6 @@ footer{
     display: flex;
     gap: 30px;
     background-color: white;
-    padding: 30px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
 }
@@ -280,7 +291,6 @@ footer{
     display: flex;
     gap: 30px;
     background-color: white;
-    padding: 25px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
 }
@@ -372,7 +382,8 @@ footer{
     height:100vh;
     transition:0.3s;
     }
-    
+
+
     .menu.activo{
     
     position: fixed;
@@ -408,7 +419,18 @@ footer{
     cursor: pointer;
     align-self: flex-end;
 }
+
+    body{
+        overflow-x:hidden;
+    }
+
+    .hero{
+        margin:0;
+        height:80vh;
+    }
+
 }
+
 
 .overlay.activo{
     display:block;
