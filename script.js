@@ -55,11 +55,9 @@ const noticias = [
     link: "#terapias"
 },
 {
-    imagen: "Imagenes/arreglos.png",
+    imagen: "Imagenes/arreglos.jpg",
     titulo: "Seguimos mejorando nuestro centro",
     texto: "Se han realizado multiples arreglos en nuestro centro, con el objetivo de brindar un mejor servicio a nuestros usuarios y sus familias.",
-    boton: "Conocer más",
-    link: "#terapias"
 }
 
 ];
@@ -109,9 +107,17 @@ function cambiarSlide(){
 
         heroTexto.textContent = noticias[indice].texto;
 
-        heroBoton.textContent = noticias[indice].boton;
+        if (noticias[indice].boton) {
 
+        heroBoton.textContent = noticias[indice].boton;
         heroBoton.href = noticias[indice].link;
+        heroBoton.style.display = "inline-block";
+
+        } else {
+
+        heroBoton.style.display = "none";
+
+}   
 
         heroImagen.style.opacity = "1";
 

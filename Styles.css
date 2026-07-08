@@ -358,7 +358,7 @@ footer{
     transform: scale(1.05);
 }
 
-@media (max-width:768px){
+@media (max-width:768px), (orientation: landscape) and (max-height: 500px) {
 
     .barra-de-navegacion{
         display:flex;
@@ -382,7 +382,6 @@ footer{
     height:100vh;
     transition:0.3s;
     }
-
 
     .menu.activo{
     
@@ -424,12 +423,132 @@ footer{
         overflow-x:hidden;
     }
 
-    .hero{
-        margin:0;
-        height:80vh;
-    }
+.hero{
 
+    height: 500px;
 }
+
+.slide{
+
+    object-position: center;
+}
+
+.hero-contenido{
+
+    width: 60%;
+
+    margin:20px;
+
+    padding:20px;
+}
+.hero-contenido h1{
+
+    font-size:32px;
+}
+.hero-contenido p{
+
+    font-size:18px;
+}
+.hero-contenido a{
+
+    width:100%;
+
+    text-align:center;
+
+    box-sizing:border-box;
+}
+.card-quienes{
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 20px;
+}
+
+.foto-quienes{
+    width: 108%;
+    height: 250px;
+}
+
+.texto-quienes{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.texto-quienes h2{
+    text-align: center;
+}
+
+.texto-quienes p{
+    text-align: left;
+}
+
+
+.fotos{
+    height: 280px;
+}
+
+.actividad-destacada img{
+    height: 300px;
+}
+
+.badge-actividad{
+    display:block;
+    width:max-content;
+    margin:15px auto;
+}
+
+.footer-superior{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-contacto,
+.footer-redes{
+    text-align: center;
+}
+
+.footer-contacto a,
+.footer-redes a,
+.footer-contacto p,
+.footer-redes p{
+    text-align: center;
+}
+
+.texto-quienes h1{
+    text-align: center;
+}
+
+.texto-quienes .boton-principal{
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+}
+
+.card-quienes{
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-quienes.invertida{
+    flex-direction: column;
+}
+
+.areas-fono{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+}
+
+.areas-fono span{
+    min-width:180px;
+    text-align:center;
+    flex:1 1 180px;
+}
+}
+
+
 
 
 .overlay.activo{
