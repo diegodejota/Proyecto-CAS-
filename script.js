@@ -12,6 +12,26 @@ const overlay = document.querySelector(".overlay");
 
 const slides = document.querySelectorAll(".slide");
 
+const carrusel = document.querySelector(".terapeutas");
+
+const btnAnterior = document.querySelector(".anterior");
+
+const btnSiguiente = document.querySelector(".siguiente");
+
+let posicion = 0;
+let autoplay;
+
+const anchoTarjeta =
+    document.querySelector(".terapeuta").offsetWidth + 20;
+
+const totalTarjetas = document.querySelectorAll(".terapeuta").length;
+
+const anchoVentana = document.querySelector(".ventana-carrusel").clientWidth;
+
+const maximo =
+    carrusel.scrollWidth -
+    document.querySelector(".ventana-carrusel").clientWidth + 20;
+
 let indice = 0;
 
 const heroImagen = document.querySelector(".slide");
@@ -21,6 +41,7 @@ const heroTitulo = document.getElementById("hero-titulo");
 const heroTexto = document.getElementById("hero-texto");
 
 const heroBoton = document.getElementById("hero-boton");
+
 
 const noticias = [
 
@@ -126,3 +147,98 @@ function cambiarSlide(){
 }
 
 setInterval(cambiarSlide, 8000);
+
+
+// =====================
+// Carrusel terapeutas
+// =====================
+
+btnSiguiente.addEventListener("click", function(){
+
+    posicion += anchoTarjeta;
+
+if(posicion > maximo){
+
+    if(posicion - anchoTarjeta < maximo){
+
+        posicion = maximo;
+
+    }else{
+
+        posicion = 0;
+
+    }
+
+}
+
+    carrusel.style.transform = `translateX(-${posicion}px)`;
+
+    iniciarAutoplay();
+
+});
+
+btnAnterior.addEventListener("click", function(){
+
+    posicion -= anchoTarjeta;
+
+if(posicion < 0){
+
+    if(posicion + anchoTarjeta > 0){
+
+        posicion = 0;
+
+    }else{
+
+        posicion = maximo;
+
+    }
+
+}
+
+    carrusel.style.transform = `translateX(-${posicion}px)`;
+
+    iniciarAutoplay();
+
+});
+
+function moverCarrusel(){
+
+    function reiniciarAutoplay(){
+
+    clearInterval(autoplay);
+
+    autoplay = setInterval(moverCarrusel, 8000);
+
+}
+
+    posicion += 240;
+
+    const maximo =
+        carrusel.scrollWidth -
+        document.querySelector(".ventana-carrusel").clientWidth;
+
+    if(posicion > maximo){
+
+        posicion = 0;
+
+    }
+
+    carrusel.style.transform = `translateX(-${posicion}px)`;
+
+}
+
+function iniciarAutoplay(){
+
+    clearTimeout(autoplay);
+
+    autoplay = setTimeout(function(){
+
+        moverCarrusel();
+
+        iniciarAutoplay();
+
+    }, 6000);
+
+}
+
+iniciarAutoplay();
