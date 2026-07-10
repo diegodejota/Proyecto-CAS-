@@ -12,6 +12,7 @@ html{
 
 #terapias, #actividades, #terapeutas, #quienes-somos{
     scroll-margin-top: 100px
+    
 }
 
 .overlay{
@@ -35,7 +36,6 @@ html{
     color:white;
     padding:6px 12px;
     border-radius:20px;
-    font-size:14px;
 }
 
 h2{
@@ -605,9 +605,6 @@ footer{
     flex:1 1 180px;
 }
 }
-
-
-
 
 .overlay.activo{
     display:block;

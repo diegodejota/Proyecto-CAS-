@@ -14,23 +14,14 @@ const slides = document.querySelectorAll(".slide");
 
 const carrusel = document.querySelector(".terapeutas");
 
+const ventanaCarrusel = document.querySelector(".ventana-carrusel");
+
 const btnAnterior = document.querySelector(".anterior");
 
 const btnSiguiente = document.querySelector(".siguiente");
 
 let posicion = 0;
 let autoplay;
-
-const anchoTarjeta =
-    document.querySelector(".terapeuta").offsetWidth + 20;
-
-const totalTarjetas = document.querySelectorAll(".terapeuta").length;
-
-const anchoVentana = document.querySelector(".ventana-carrusel").clientWidth;
-
-const maximo =
-    carrusel.scrollWidth -
-    document.querySelector(".ventana-carrusel").clientWidth + 20;
 
 let indice = 0;
 
@@ -108,6 +99,8 @@ enlaces.forEach(function(enlace){
 
 });
 
+if (heroImagen) {
+
 function cambiarSlide(){
 
     console.log("cambiando slide");
@@ -144,7 +137,7 @@ function cambiarSlide(){
 
     },500);
 
-}
+}}
 
 setInterval(cambiarSlide, 8000);
 
@@ -152,6 +145,20 @@ setInterval(cambiarSlide, 8000);
 // =====================
 // Carrusel terapeutas
 // =====================
+
+if (carrusel && ventanaCarrusel) {
+
+
+    const anchoTarjeta =
+    document.querySelector(".terapeuta").offsetWidth + 20;
+
+const totalTarjetas = document.querySelectorAll(".terapeuta").length;
+
+const anchoVentana = document.querySelector(".ventana-carrusel").clientWidth;
+
+const maximo =
+    carrusel.scrollWidth -
+    document.querySelector(".ventana-carrusel").clientWidth + 20;
 
 btnSiguiente.addEventListener("click", function(){
 
@@ -242,3 +249,7 @@ function iniciarAutoplay(){
 }
 
 iniciarAutoplay();
+}
+
+
+
