@@ -91,6 +91,214 @@ const noticias = [
 ];
 
 
+const actividades = [
+
+{
+    titulo:"Voluntariado UGM",
+    fecha:"Julio 2026",
+    imagenes:[
+        "actividades v2/ugm16.webp",
+        "actividades v2/ugm2.webp",
+        "actividades v2/ugm3.webp",
+        "actividades v2/ugm4.webp",
+        "actividades v2/ugm5.webp",
+        "actividades v2/ugm6.webp",
+        "actividades v2/ugm7.webp",
+        "actividades v2/ugm8.webp",
+        "actividades v2/ugm10.webp",
+        "actividades v2/ugm11.webp",
+        "actividades v2/ugm12.webp",
+        "actividades v2/ugm13.webp",
+        "actividades v2/ugm14.webp",
+        "actividades v2/ugm15.webp"
+    ]
+},
+
+{
+    titulo:"Celebración Día del Padre",
+    fecha:"Junio 2026",
+    imagenes:[
+        "actividades v2/diapadre (1).webp",
+        "actividades v2/diapadre (2).webp",
+        "actividades v2/diapadre (3).webp",
+        "actividades v2/diapadre (4).webp",
+        "actividades v2/diapadre (5).webp",
+        "actividades v2/diapadre (6).webp",
+        "actividades v2/diapadre (7).webp",
+        "actividades v2/diapadre (8).webp",
+        "actividades v2/diapadre (9).webp",
+        "actividades v2/diapadre (10).webp",
+        "actividades v2/diapadre (11).webp",
+        "actividades v2/diapadre (12).webp",
+        "actividades v2/diapadre (13).webp",
+        "actividades v2/diapadre (14).webp",
+    ]
+},
+
+{
+    titulo:"Celebración Día de la Madre",
+    fecha:"Mayo 2026",
+    imagenes:[
+        "actividades v2/diamadre (1).webp",
+        "actividades v2/diamadre (2).webp",
+        "actividades v2/diamadre (3).webp",
+        "actividades v2/diamadre (4).webp",
+        "actividades v2/diamadre (5).webp",
+        "actividades v2/diamadre (6).webp",
+        "actividades v2/diamadre (7).webp",
+        "actividades v2/diamadre (8).webp",
+        "actividades v2/diamadre (9).webp",
+        "actividades v2/diamadre (10).webp",
+        "actividades v2/diamadre (11).webp",
+    ]
+},
+
+{
+    titulo:"DivierteTEA",
+    fecha:"Abril 2026",
+    imagenes:[
+        "actividades v2/diviertetea (1).webp",
+        "actividades v2/diviertetea (2).webp",
+        "actividades v2/diviertetea (3).webp",
+        "actividades v2/diviertetea (4).webp",
+        "actividades v2/diviertetea (5).webp",
+    ]
+}
+
+];
+
+function obtenerIndiceGlobal(){
+
+    let indice = 0;
+
+    for(let i = 0; i < actividadActual; i++){
+
+        indice += actividades[i].imagenes.length;
+
+    }
+
+    return indice + fotoActual;
+
+}
+
+const totalFotos = actividades.reduce((total, actividad) => {
+
+    return total + actividad.imagenes.length;
+
+}, 0);
+
+let actividadActual = 0;
+let fotoActual = 0;
+
+const titulo = document.getElementById("tituloActividad");
+const fecha = document.getElementById("fechaActividad");
+const descripcion = document.getElementById("descripcionActividad");
+const imagen = document.getElementById("fotoPrincipal");
+const contador = document.getElementById("contador");
+const btnAnteriorGaleria = document.getElementById("anterior");
+const btnSiguienteGaleria = document.getElementById("siguiente");
+const miniaturas = document.getElementById("miniaturas");
+
+function mostrarFoto(){
+
+        const actividad = actividades[actividadActual];
+
+    titulo.textContent = actividad.titulo;
+    fecha.textContent = actividad.fecha;
+
+    imagen.src = actividad.imagenes[fotoActual];
+
+contador.textContent =
+    (obtenerIndiceGlobal() + 1) + " / " + totalFotos;
+
+        miniaturas.innerHTML = "";
+
+actividad.imagenes.forEach((ruta, indice) => {
+
+    const mini = document.createElement("img");
+
+    mini.src = ruta;
+
+    mini.classList.add("miniatura");
+
+    if(indice === fotoActual){
+        mini.classList.add("activa");
+    }
+
+    mini.addEventListener("click", () => {
+
+        fotoActual = indice;
+
+        mostrarFoto();
+
+    });
+
+    miniaturas.appendChild(mini);
+
+});
+}
+function siguiente(){
+    const actividad = actividades[actividadActual];
+
+    if(fotoActual < actividad.imagenes.length - 1){
+
+        fotoActual++;
+
+    }else{
+
+        if(actividadActual < actividades.length - 1){
+
+            actividadActual++;
+            fotoActual = 0;
+
+        }else{
+
+            actividadActual = 0;
+            fotoActual = 0;
+
+        }
+
+    }
+
+    mostrarFoto();
+}
+
+function anterior(){
+if(fotoActual > 0){
+
+        fotoActual--;
+
+    }else{
+
+        if(actividadActual > 0){
+
+            actividadActual--;
+
+            fotoActual = actividades[actividadActual].imagenes.length - 1;
+
+        }else{
+
+            actividadActual = actividades.length - 1;
+
+            fotoActual = actividades[actividadActual].imagenes.length - 1;
+
+        }
+
+    }
+
+    mostrarFoto();
+
+}
+
+btnAnteriorGaleria.addEventListener("click", anterior);
+btnSiguienteGaleria.addEventListener("click", siguiente);
+
+mostrarFoto();
+
+
+
+
+
 hamburguesa.addEventListener("click", function(){
 
     menu.classList.toggle("activo");
