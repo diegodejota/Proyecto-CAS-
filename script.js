@@ -37,7 +37,7 @@ const heroBoton = document.getElementById("hero-boton");
 const noticias = [
 
 {
-    imagen: "Imagenes retocadas/hero.webp",
+    imagen: "imagenes retocadas/hero.webp",
     titulo: "CAS Autismo La Pintana",
     texto: "Cada paso es un logro, cada proceso tiene su ritmo.",
     boton: "Contáctanos",
@@ -45,7 +45,7 @@ const noticias = [
 },
 
 {
-    imagen: "Imagenes retocadas/apadrinamiento.webp",
+    imagen: "imagenes retocadas/apadrinamiento.webp",
     titulo: "Apadrina una terapia",
     texto: "Con tu aporte ayudas a que niños y niñas accedan a terapias especializadas y continúen su proceso de desarrollo.",
     boton: "Quiero ayudar",
@@ -53,7 +53,7 @@ const noticias = [
 },
 
 {
-    imagen: "Imagenes retocadas/agendas.webp",
+    imagen: "imagenes retocadas/agendas.webp",
     titulo: "Agendas terapeuticas CAS",
     texto: "Conoce nuestras agendas terapéuticas, diseñadas para acompañar a nuestros usuarios y sus familias en su proceso de desarrollo. Llevate una por un aporte voluntario.",
     boton: "Quiero una agenda",
@@ -61,7 +61,7 @@ const noticias = [
 },
 
 {
-    imagen: "Imagenes retocadas/voluntariosUGM.webp",
+    imagen: "imagenes retocadas/voluntariosUGM.webp",
     titulo: "Voluntariado UGM",
     texto: "Agradecemos a la universidad Gabriela Mistral por su apoyo en la realización de actividades de voluntariado, quienes permitieron mejorar nuestra fachada y generar un espacio de encuentro y aprendizaje.",
     boton: "Ver más",
@@ -69,21 +69,21 @@ const noticias = [
 },
 
 {
-    imagen: "Imagenes retocadas/habilidades-sociales.webp",
+    imagen: "imagenes retocadas/habilidades-sociales.webp",
     titulo: "Taller de habilidades sociales",
     texto: "Espacios grupales diseñados para fortalecer la comunicación, interacción y autonomía de nuestros usuarios.",
     boton: "Conocer más",
     link: "#actividades"
 },
 {
-    imagen: "Imagenes retocadas/Huerto.webp",
+    imagen: "imagenes retocadas/Huerto.webp",
     titulo: "Taller de Huerto",
     texto: "Actividad dirigidas a padres con el objetivo de embellecer nuestro centro y generar un espacio de encuentro y aprendizaje.",
     boton: "Conocer más",
     link: "#terapias"
 },
 {
-    imagen: "Imagenes retocadas/arreglos.webp",
+    imagen: "imagenes retocadas/arreglos.webp",
     titulo: "Seguimos mejorando nuestro centro",
     texto: "Se han realizado multiples arreglos en nuestro centro, con el objetivo de brindar un mejor servicio a nuestros usuarios y sus familias.",
 }
