@@ -290,8 +290,17 @@ if(fotoActual > 0){
 
 }
 
-btnAnteriorGaleria.addEventListener("click", anterior);
-btnSiguienteGaleria.addEventListener("click", siguiente);
+const btnAnteriorGaleria = document.getElementById("anterior");
+const btnSiguienteGaleria = document.getElementById("siguiente");
+
+if(btnAnteriorGaleria && btnSiguienteGaleria){
+
+    btnAnteriorGaleria.addEventListener("click", anterior);
+    btnSiguienteGaleria.addEventListener("click", siguiente);
+
+    mostrarFoto();
+
+}
 
 mostrarFoto();
 
