@@ -134,7 +134,7 @@ h2{
     z-index: 1000;
 }
 
-.actividades, .terapias, .testimonios-contenido {
+.actividades, .terapias{
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -142,7 +142,7 @@ h2{
     flex-wrap: wrap;
 }
 
-.fonoaudiologo, .kinesiologo, .terapeuta-ocupacional, .psicologo, .testimonio {
+.fonoaudiologo, .kinesiologo, .terapeuta-ocupacional, .psicologo{
     background-color: #fdd01e;
     width: 220px;
     padding: 15px;
@@ -154,14 +154,14 @@ h2{
 
 .fonoaudiologo:hover, .kinesiologo:hover, .terapeuta-ocupacional:hover,
 .kinesiologia:hover, .terapia-ocupacional:hover, .psicologia:hover, .psicologo:hover, .fonoaudiologia:hover, 
-.ados:hover, .hero-contenido a:hover, .actividad-card:hover, .testimonio:hover {   
+.ados:hover, .hero-contenido a:hover, .actividad-card:hover{   
     background-color: #fd9e3d;
     transition: 0.3s;
     transform: scale(1.05);
     cursor: pointer;
 }
 
-.fonoaudiologia, .kinesiologia, .terapia-ocupacional, .psicologia, .ados, .testimonio {
+.fonoaudiologia, .kinesiologia, .terapia-ocupacional, .psicologia, .ados{
     background-color: #fdd01e;
     width: 220px;
     padding: 15px;
@@ -453,6 +453,101 @@ footer{
     background-color: #fd9e3d;
     transition: 0.3s;
     transform: scale(1.05);
+}
+
+.testimonios{
+    padding:80px 8%;
+    background:#f8f8f8;
+    text-align:center;
+}
+
+.testimonios h2{
+    font-size:2.2rem;
+    margin-bottom:50px;
+}
+
+.contenedor-testimonios{
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+    align-items:center;
+
+}
+
+.card-testimonio{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    text-align:left;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    border-top:8px solid #FFC928;
+
+    transition:.3s;
+
+
+}
+
+.card-testimonio:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+
+}
+
+.estrellas{
+
+    font-size:1.4rem;
+
+    color:#FFC928;
+
+    margin-bottom:25px;
+
+}
+
+.comentario{
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+    color:#444;
+
+    font-style:italic;
+}
+
+.autor{
+
+    border-top:1px solid #e5e5e5;
+
+    margin-top:25px;
+
+    padding-top:20px;
+
+}
+
+.autor h4{
+
+    margin-bottom:5px;
+
+    font-size:1.1rem;
+
+    color:#222;
+
+}
+
+.autor span{
+
+    color:#666;
+
+    font-size:.95rem;
+
 }
 
 @media (max-width:768px), (orientation: landscape) and (max-height: 500px) {

@@ -54,7 +54,7 @@ const noticias = [
 
 {
     imagen: "imagenes retocadas/agendas.webp",
-    titulo: "Agendas terapeuticas CAS",
+    titulo: "Agendas terapéuticas CAS",
     texto: "Conoce nuestras agendas terapéuticas, diseñadas para acompañar a nuestros usuarios y sus familias en su proceso de desarrollo. Llevate una por un aporte voluntario.",
     boton: "Quiero una agenda",
     link: "#"
@@ -83,7 +83,7 @@ const noticias = [
     link: "#terapias"
 },
 {
-    imagen: "imagenes retocadas/arreglos.webp",
+    imagen: "Imagenes retocadas/arreglos.webp",
     titulo: "Seguimos mejorando nuestro centro",
     texto: "Se han realizado multiples arreglos en nuestro centro, con el objetivo de brindar un mejor servicio a nuestros usuarios y sus familias.",
 }
