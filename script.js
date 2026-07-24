@@ -41,7 +41,8 @@ const noticias = [
     titulo: "CAS Autismo La Pintana",
     texto: "Cada paso es un logro, cada proceso tiene su ritmo.",
     boton: "Contáctanos",
-    link: "https://wa.me/56927653017"
+    tipo: "whatsapp",
+    mensaje: "Hola, me gustaría conocer los servicios del centro."
 },
 
 {
@@ -49,43 +50,51 @@ const noticias = [
     titulo: "Apadrina una terapia",
     texto: "Con tu aporte ayudas a que niños y niñas accedan a terapias especializadas y continúen su proceso de desarrollo.",
     boton: "Quiero ayudar",
-    link: "#"
+    tipo: "whatsapp",
+    mensaje: "Hola, me gustaría conocer sobre el apadrinamiento de terapias."
 },
 
 {
     imagen: "imagenes retocadas/agendas.webp",
     titulo: "Agendas terapéuticas CAS",
-    texto: "Conoce nuestras agendas terapéuticas, diseñadas para acompañar a nuestros usuarios y sus familias en su proceso de desarrollo. Llevate una por un aporte voluntario.",
+    texto: "Conoce nuestras agendas terapéuticas, diseñadas para acompañar a nuestros usuarios y sus familias en su proceso de desarrollo. Llévate una por un aporte económico voluntario.",
     boton: "Quiero una agenda",
-    link: "#"
+    tipo: "whatsapp",
+    mensaje: "Hola, me gustaría reservar una agendas terapéutica."
 },
 
 {
     imagen: "imagenes retocadas/voluntarios2.webp",
     titulo: "Voluntariado UGM",
-    texto: "Agradecemos a la universidad Gabriela Mistral por su apoyo en la realización de actividades de voluntariado, quienes permitieron mejorar nuestra fachada y generar un espacio de encuentro y aprendizaje.",
+    texto: "Agradecemos a la universidad Gabriela Mistral por su apoyo en la realización de actividades de voluntariado.",
     boton: "Ver más",
-    link: "#"
-},
+    tipo: "pagina",
+    link: "actividades.html"
+},  
 
 {
     imagen: "imagenes retocadas/habilidades-sociales.webp",
     titulo: "Taller de habilidades sociales",
     texto: "Espacios grupales diseñados para fortalecer la comunicación, interacción y autonomía de nuestros usuarios.",
     boton: "Conocer más",
-    link: "#actividades"
+    tipo: "whatsapp",
+    mensaje: "Hola, me gustaría conocer el funcionamiento de los talleres de habilidades sociales."
 },
 {
     imagen: "imagenes retocadas/Huerto.webp",
     titulo: "Taller de Huerto",
     texto: "Actividad dirigidas a padres con el objetivo de embellecer nuestro centro y generar un espacio de encuentro y aprendizaje.",
     boton: "Conocer más",
-    link: "#terapias"
+    tipo: "whatsapp",
+    mensaje: "Hola, me gustaría conocer el funcionamiento del taller de huerto."
 },
 {
     imagen: "imagenes retocadas/arreglos.webp",
     titulo: "Seguimos mejorando nuestro centro",
-    texto: "Se han realizado multiples arreglos en nuestro centro, con el objetivo de brindar un mejor servicio a nuestros usuarios y sus familias.",
+    texto: "Se han realizado múltiples arreglos en nuestro centro, con el objetivo de brindar un mejor servicio a nuestros usuarios y sus familias.",
+    boton: "Conocer más",
+    tipo: "whatsapp",
+    mensaje: "Hola, me gustaría conocer los arreglos realizados en nuestro centro."
 }
 
 ];
@@ -141,14 +150,34 @@ function cambiarSlide(){
         if (noticias[indice].boton) {
 
         heroBoton.textContent = noticias[indice].boton;
-        heroBoton.href = noticias[indice].link;
+
+        if(noticias[indice].tipo === "whatsapp"){
+
+        heroBoton.onclick = function(){
+
+            abrirWhatsApp(noticias[indice].mensaje);
+
+        };
+
+        }
+
+        else if(noticias[indice].tipo === "pagina"){
+
+        heroBoton.onclick = function(){
+
+            window.location.href = noticias[indice].link;
+
+        };
+
+        }
+
         heroBoton.style.display = "inline-block";
 
         } else {
 
         heroBoton.style.display = "none";
 
-}   
+        }
 
         heroImagen.style.opacity = "1";
 
@@ -269,4 +298,13 @@ iniciarAutoplay();
 }
 
 
+function abrirWhatsApp(mensaje){
 
+    const numero = "56927653017";
+
+    window.open(
+        `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`,
+        "_blank"
+    );
+
+}

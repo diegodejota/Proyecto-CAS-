@@ -476,5 +476,14 @@ function iniciarAutoplay(){
 iniciarAutoplay();
 }
 
+function abrirWhatsApp(mensaje){
 
+    const numero = "56927653017";
+
+    window.open(
+        `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`,
+        "_blank"
+    );
+
+}
 
