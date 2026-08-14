@@ -94,6 +94,42 @@ const noticias = [
 const actividades = [
 
 {
+    titulo:"Celebracion del dia del niño",
+    fecha:"Agosto 2026",
+    imagenes:[
+        "actividades v2/dia-del-niño (13).webp",
+        "actividades v2/dia-del-niño (1).webp",
+        "actividades v2/dia-del-niño (2).webp",
+        "actividades v2/dia-del-niño (3).webp",
+        "actividades v2/dia-del-niño (4).webp",
+        "actividades v2/dia-del-niño (5).webp",
+        "actividades v2/dia-del-niño (6).webp",
+        "actividades v2/dia-del-niño (7).webp",
+        "actividades v2/dia-del-niño (8).webp",
+        "actividades v2/dia-del-niño (9).webp",
+        "actividades v2/dia-del-niño (10).webp",
+        "actividades v2/dia-del-niño (11).webp",
+        "actividades v2/dia-del-niño (12).webp",
+    ]
+},
+
+{
+    titulo:"Inauguración Huerto “Raíces Unidas”",
+    fecha:"Julio 2026",
+    imagenes:[
+        "actividades v2/huerto.webp",
+        "actividades v2/huertos (1).webp",
+        "actividades v2/huertos (2).webp",
+        "actividades v2/huertos (3).webp",
+        "actividades v2/huertos (4).webp",
+        "actividades v2/huertos (5).webp",
+        "actividades v2/huertos (6).webp",
+        "actividades v2/huertos (7).webp",
+        "actividades v2/huertos (8).webp",
+    ]
+},
+
+{
     titulo:"Voluntariado UGM",
     fecha:"Julio 2026",
     imagenes:[

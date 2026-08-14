@@ -81,12 +81,12 @@ const noticias = [
     mensaje: "Hola, me gustaría conocer el funcionamiento de los talleres de habilidades sociales."
 },
 {
-    imagen: "imagenes retocadas/Huerto.webp",
-    titulo: "Taller de Huerto",
-    texto: "Actividad dirigidas a padres con el objetivo de embellecer nuestro centro y generar un espacio de encuentro y aprendizaje.",
-    boton: "Conocer más",
-    tipo: "whatsapp",
-    mensaje: "Hola, me gustaría conocer el funcionamiento del taller de huerto."
+    imagen: "imagenes retocadas/huerto.webp",
+    titulo: "Inauguramos nuestro huerto “Raíces Unidas”",
+    texto: "El pasado viernes 24 de julio recibimos la visita del Ministerio de Desarrollo Social y Familia, en el marco de la inauguración de nuestro huerto “Raíces Unidas”, un espacio impulsado por CENFA Chile para madres cuidadoras de hijos autistas y que será utilizado con fines terapéuticos.",
+    boton: "Ver actividad",
+    tipo: "pagina",
+    link: "actividades.html"
 },
 {
     imagen: "imagenes retocadas/arreglos.webp",
@@ -98,6 +98,44 @@ const noticias = [
 }
 
 ];
+
+const btnHistoria = document.getElementById("btnHistoria");
+const modalHistoria = document.getElementById("modalHistoria");
+const cerrarHistoria = document.getElementById("cerrarHistoria");
+
+if (btnHistoria) {
+
+    btnHistoria.addEventListener("click", function() {
+
+        modalHistoria.style.display = "flex";
+
+    });
+
+}
+
+if (cerrarHistoria) {
+
+    cerrarHistoria.addEventListener("click", function() {
+
+        modalHistoria.style.display = "none";
+
+    });
+
+}
+
+if (modalHistoria) {
+
+    modalHistoria.addEventListener("click", function(event) {
+
+        if (event.target === modalHistoria) {
+
+            modalHistoria.style.display = "none";
+
+        }
+
+    });
+
+}
 
 
 hamburguesa.addEventListener("click", function(){
