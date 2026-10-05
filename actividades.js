@@ -94,6 +94,47 @@ const noticias = [
 const actividades = [
 
 {
+    titulo:"Celebración Fiestas Patrias",
+    fecha:"Septiembre 2026",
+    imagenes:[
+        "actividades v2/fiestas-patrias (1).webp",
+        "actividades v2/fiestas-patrias (2).webp",
+        "actividades v2/fiestas-patrias (3).webp",
+        "actividades v2/fiestas-patrias (4).webp",
+        "actividades v2/fiestas-patrias (5).webp",
+        "actividades v2/fiestas-patrias (6).webp",
+        "actividades v2/fiestas-patrias (7).webp",
+        "actividades v2/fiestas-patrias (8).webp",
+        "actividades v2/fiestas-patrias (9).webp",
+        "actividades v2/fiestas-patrias (10).webp",
+        "actividades v2/fiestas-patrias (11).webp",
+        "actividades v2/fiestas-patrias (12).webp",
+        "actividades v2/fiestas-patrias (13).webp",
+        "actividades v2/fiestas-patrias (14).webp",
+        "actividades v2/fiestas-patrias (15).webp",
+        "actividades v2/fiestas-patrias (16).webp",
+        "actividades v2/fiestas-patrias (17).webp",
+        "actividades v2/fiestas-patrias (18).webp",
+        "actividades v2/fiestas-patrias (19).webp",
+        "actividades v2/fiestas-patrias (20).webp",
+        "actividades v2/fiestas-patrias (21).webp",
+        "actividades v2/fiestas-patrias (22).webp",
+        "actividades v2/fiestas-patrias (23).webp",
+        "actividades v2/fiestas-patrias (24).webp",
+        "actividades v2/fiestas-patrias (25).webp",
+        "actividades v2/fiestas-patrias (26).webp",
+        "actividades v2/fiestas-patrias (27).webp",
+        "actividades v2/fiestas-patrias (28).webp",
+        "actividades v2/fiestas-patrias (29).webp",
+        "actividades v2/fiestas-patrias (30).webp",
+        "actividades v2/fiestas-patrias (31).webp",
+        "actividades v2/fiestas-patrias (32).webp",
+        "actividades v2/fiestas-patrias (33).webp",
+        "actividades v2/fiestas-patrias (34).webp",
+    ]
+},
+
+{
     titulo:"Celebracion del dia del niño",
     fecha:"Agosto 2026",
     imagenes:[

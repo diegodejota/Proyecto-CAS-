@@ -37,8 +37,8 @@ const heroBoton = document.getElementById("hero-boton");
 const noticias = [
 
 {
-    imagen: "imagenes retocadas/hero.webp",
-    titulo: "CAS Autismo La Pintana",
+    imagen: "imagenes retocadas/lumi.webp",
+    titulo: "Le damos la bievenida a Lumi.",
     texto: "Cada paso es un logro, cada proceso tiene su ritmo.",
     boton: "Contáctanos",
     tipo: "whatsapp",

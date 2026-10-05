@@ -571,16 +571,15 @@ footer{
     margin:auto;
 
 }
-
 .infoFoto{
 
     position:absolute;
 
     bottom:0;
 
-    left:50px;
+    left:0;
 
-    width:90%;
+    width:100%;
 
     background:rgba(18, 18, 18, 0.216);
 
@@ -1147,6 +1146,37 @@ footer{
         height:45px;
 
     }
+
+    .hero {
+        height: 620px;
+    }
+
+    .slide {
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .slide[src*="lumi.webp"] {
+        object-position: 78% center;
+    }
+
+    .hero:has(.slide[src*="huerto.webp"]) .hero-contenido {
+    padding: 15px;
+    margin: 10px;
+}
+
+.hero:has(.slide[src*="huerto.webp"]) .hero-contenido h1 {
+    font-size: 26px;
+    line-height: 1.25;
+    margin-bottom: 15px;
+}
+
+.hero:has(.slide[src*="huerto.webp"]) .hero-contenido p {
+    font-size: 15px;
+    line-height: 1.35;
+    margin-bottom: 15px;
+}
+
 
 }
 
